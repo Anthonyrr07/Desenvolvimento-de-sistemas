@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Filme {
+            constructor(Titulo, Gênero, Duração){
+                this.Titulo = Titulo;
+                this.Gênero = Gênero;
+                this.Duração = Duração;
+            }
+            informacoesFilme(){
+                console.log(`Título: ${this.Titulo}`)
+                console.log(`Gênero: ${this.Gênero}`)
+                console.log(`Duração: ${this.Duração}`)
+            }
+        }
+
+        let Filme1 = new Filme ("Batman", 'Super Herói', '2h20')
+
+        console.log(Filme1)
+        console.log(`${Filme1.informacoesFilme()}`);
+    </script>
+</body>
+</html>
