@@ -15,16 +15,25 @@
                 this.despesasAnuais = despesasAnuais;
             }
             calcularLucroAnual(){
-                return(this.receitaAnuais/(this.despesasAnuais * this.despesasAnuais)).toFixed(2)
+                return(this.receitaAnuais-this.despesasAnuais).toFixed(2)
             }
 
-            exibirRelatorio()
+            exibirRelatorio(){
+                return(this.nome, this.receitasAnuais, this.despesasAnuais, calcularLucroAnual())
+                console.log(`Nome: ${this.nome}`)
+                console.log(`Receitas Anuais: ${this.receitasAnuais}`)
+                console.log(`Despesas Anuais: ${this.despesasAnuais}`)
+            }
+            
         }
 
-        let Empresa1 = new Empresa ("Leo Stronda", 160, 1.80)
+        let Empresa1 = new Empresa ("Microsoft", 10, 8)
+        let Empresa2 = new Empresa ('Playstation', 20, 10)
 
         console.log(Empresa1)
-        console.log(`O imc é: ${Atleta1.calculoimc()}`);
+        console.log(Empresa2)
+        console.log(`O Lucro da Playstation é: ${Empresa1.calcularLucroAnual()}`);
+        console.log(` O Lucro da Microsoft é:  ${Empresa2.calcularLucroAnual()}`)
     </script>
 </body>
 </html>
